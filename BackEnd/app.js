@@ -8,5 +8,5 @@ app.use(cors()); // 4. Cors enable karein
 app.use(express.json()); // 5. JSON body parser (Sirf EK BAAR)
 
 app.use('/products', productRoutes);
-
-app.listen(3000, () => console.log("Server chal raha hai port 3000 par!"));
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => console.log(`Server chal raha hai port ${PORT} par!`));
